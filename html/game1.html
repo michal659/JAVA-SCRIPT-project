@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>game</title> 
+    <link rel="stylesheet" href="..//CSS/home.css">
+    <link rel="stylesheet" href="..//CSS/game.css">
+    <link rel="icon" href="../תמונות/רקע.jpg" type="image/x-icon"> 
+</head>
+<body>
+    <div id="allTimer"> <!--תצוגת הטיימר -->
+        <img src="..//תמונות/שעון חול.gif" alt="שעון חול"> 
+        <div id="timer">00:00</div> <!--דיב שמציג את הזמן שנשאר-->
+    </div>
+    <div id="allScore"> <!--הצגת הנקודות-->
+        <img class="scoreImg" src="..//תמונות/תיבת קלט.png" alt=""> 
+        <div id="allScoreText">סה"כ נקודות: 0</div> 
+    </div>
+    <button id="startButton"> <!-- כפתור להתחלת המשחק -->
+        <div class="image-container"> <!-- קונטיינר לתמונה בתוך הכפתור -->
+            <img src="..//תמונות/התחל משחק.png" alt="התחל">
+        </div>
+    </button>
+    <a href="../html/GameInstructions.html" class="image-GameInstruction">
+        <img src="..//תמונות/הוראות.png" alt="תיאור התמונה">
+    </a>
+    <a href="../html/home.html" class="image-Exit">
+        <img src="..//תמונות/יציאה.png" alt="תיאור התמונה"> 
+    </a>
+    <div class="button-container">
+        <button id="level1">
+            <div class="image-level">
+                <img src="..//תמונות/רמה 1.png" alt="Level 1">
+            </div>
+        </button>
+        <button id="level2">
+            <div class="image-level">
+                <img src="..//תמונות/רמה 2.png" alt="Level 2">
+            </div>
+        </button>
+    </div>
+    <div id="word"></div> <!-- מיכל להצגת המילה הנוכחית במשחק -->
+    <section id="letters"> <!--  מיכל את כפתורי האותיות -->
+        <div class="rowLetters"> <!--סידור המקלדת-->
+            <button class="letter" data-value="א">א</button> 
+            <button class="letter" data-value="ב">ב</button> 
+            <button class="letter" data-value="ג">ג</button>
+            <button class="letter" data-value="ד">ד</button>
+            <button class="letter" data-value="ה">ה</button> 
+            <button class="letter" data-value="ו">ו</button>
+            <button class="letter" data-value="ז">ז</button> 
+            <button class="letter" data-value="ח">ח</button>
+            <button class="letter" data-value="ט">ט</button>
+            <button class="letter" data-value="י">י</button> 
+        </div>
+        <div class="rowLetters"> 
+            <button class="letter" data-value="כ">כ</button> 
+            <button class="letter" data-value="ך">ך</button> 
+            <button class="letter" data-value="ל">ל</button> 
+            <button class="letter" data-value="מ">מ</button>
+            <button class="letter" data-value="ם">ם</button>
+            <button class="letter" data-value="נ">נ</button> 
+            <button class="letter" data-value="ן">ן</button> 
+            <button class="letter" data-value="ס">ס</button> 
+            <button class="letter" data-value="ע">ע</button> 
+            <button class="letter" data-value="פ">פ</button> 
+        </div>
+        <div class="rowLetters">
+            <button class="letter" data-value="ף">ף</button> 
+            <button class="letter" data-value="צ">צ</button> 
+            <button class="letter" data-value="ץ">ץ</button>
+            <button class="letter" data-value="ק">ק</button> 
+            <button class="letter" data-value="ר">ר</button> 
+            <button class="letter" data-value="ש">ש</button> 
+            <button class="letter" data-value="ת">ת</button>
+        </div>
+    </section>
+    <div id="image"> 
+        <img id="hangmanImage" src="..//תמונות/0.png" alt="Hangman Image"> 
+    </div>
+    <div >
+        <img class="scoreImg" src="..//תמונות/תיבת קלט.png" alt="">
+        <div id="score" class="score">נקודות: 0</div> 
+    </div>
+    <div id="timesUpMessage" class="message-content" style="display: none;">
+        <img id="timesUpImg" src="..//תמונות/הזמן נגמר.png" alt="timesUp"/> 
+        <audio id="timesUpSound" src="..//מוסיקה/סיום משחק.mp3" preload="auto"></audio>
+    </div>
+    
+    <div id="gameOverMessage" class="message-content" style="display: none;">
+        <img id="gameOveImg" src="..//תמונות/gmae over.jpg" alt="GameOver"/>
+        <audio id="gameOverSound" src="..//מוסיקה/game over.mp3" preload="auto"></audio>
+    </div>
+    
+    <audio id="error" src="..//מוסיקה/שגיאה של אות.mp3"></audio> 
+    <audio id="success" src="..//מוסיקה/הצלחה של מילה.mp3"></audio>
+    <script src="../JS/game1.js"></script>
+</body>
+</html>

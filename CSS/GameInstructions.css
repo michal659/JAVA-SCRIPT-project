@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {/*כל הטקסט*/
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+}
+h2 {
+    color: #555;
+}
+p {
+    line-height: 1.6;
+}
+ul {
+    list-style: disc;/*צורת העיגול*/
+    padding-left: 20px;
+}
+.note {/*עיצוב הטיפים*/
+    background-color: #f9f9f9;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    margin: 20px 0;
+}
+/* עיצוב לתמונה */
+.styled-image {
+    width: 130px; /* הגדלת רוחב התמונה */
+    height: auto; /* שמירה על פרופורציות התמונה */
+    border-radius: 8px; /* עיגול הפינות */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הצל של התמונה */
+    transition: transform 0.3s, box-shadow 0.3s; /* אפקט מעבר רך */
+    margin-top: 10px; /* רווח למעלה כדי להוריד את התמונה מעט למטה */
+}
+
+/* עיצוב בזמן ריחוף */
+.styled-image:hover {
+    transform: scale(1.1); /* הגדלת התמונה ב-10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* הגדלת הצל */
+}
+

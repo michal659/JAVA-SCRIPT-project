@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- <link rel="stylesheet" href="login.js"> -->
+   <link rel="stylesheet" href="../CSS/login&signUp.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="icon" href="..//תמונות/תמונה21.jp5.jpg" type="image/x-icon">
+</head>
+<body>
+    <br>
+    <div id="date"></div><!--תאריך-->
+    <h1>התחברות למשחק</h1>
+<br></br>
+<form><!--תיבת קלט-->
+<!--placeholder-שהכיתוב יהיה בתוך התיבה-->
+    <input type="text" class="inputKelt" id="fname" name="fname"  placeholder="שם פרטי" required><br><br>
+    <input type="text"class="inputKelt" id="lname" name="lname" placeholder="שם משפחה" required><br><br>
+    <input type="password"class="inputKelt" id="password" name="password" placeholder="סיסמא" required><br><br>
+    <button type="submit" onclick="check2(event),userExist(event)" class="blueButton">התחברות</button>
+</form>
+<a href="../html/signUp.html"><input  class="blueButton" value="מעבר לדף הרשמה" /></a>
+</body>
+    <script src="../JS/signUp-login.js"></script>
+</html>

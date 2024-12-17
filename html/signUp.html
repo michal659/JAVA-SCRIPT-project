@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+   <link rel="stylesheet" href="../CSS/login&signUp.css">
+   <link rel="icon" href="..//תמונות/תמונה21.jp5.jpg" type="image/x-icon">
+
+</head>
+<body>
+    <br>
+    <div id="date"></div><!--תאריך-->
+    <h1>איזה כיף שבאת לשחק איתנו</h1>
+    <br>
+    <form  onsubmit="validateForm(event)">  
+        <input type="text" class="inputKelt" id="fname" name="fname" placeholder="שם פרטי"  required><br>
+        <input type="text" class="inputKelt" id="lname" name="lname" placeholder="שם משפחה"  required><br>
+        <input type="email" class="inputKelt" id="gmail" name="gmail" placeholder="כתובת מייל"  required><br>
+        <input type="password" class="inputKelt" id="password" name="password" placeholder="סיסמא"  required><br>
+        <input type="tel" class="inputKelt" id="phone" name="phone" placeholder="מספר טלפון"  pattern="[0]{1}[5]{1}[0-9]{8}" required><br>
+        <input type="submit" class="blueButton" id="submit"  name="submit" value="הרשמה" />
+        
+    </form>       
+    <a href="..//html/login.html"><input class="blueButton" value="מעבר לדף התחברות" /></a>
+</body>
+<script src="../JS/signUp-login.js" defer></script>
+</html>

@@ -1,0 +1,39 @@
+body {
+    direction: rtl;
+    text-align: center;
+    background-image: url(..//תמונות/רקע.jpg);
+    background-size: cover;/*התמונה מתפרשת לכל העמוד*/
+}
+h1 {/*כותרת*/
+    color: #333;
+    margin-top: 30px;
+    font-size: 50px;
+    border: 5px solid #007bff;
+    display: inline-block;
+    padding: 10px;   
+     /* עושה את המסגרת  כמילת שורה עם גבולות ברוחב הטקסט */
+
+}
+
+.blueButton {/*הכפתורים הכחולים*/
+    width: 180px; 
+    height: 50px; 
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; /* כאשר עומדים על הכפותר יש צורה של יד*/
+    margin: 10px; /* רוחח בין כפתור לכפתור*/
+    transition: background-color 0.3s, transform 0.2s; /* שינוי צבע וגודל כאשר עומדים על הכפתור */
+}
+
+.blueButton:hover {
+    background-color: #0056b3; /* שינוי הצבע*/
+    transform: scale(1.05); /* שינוי הגודל*/
+}
+
+.blueButton:active {
+    background-color: #003d7a; /*בלחיצה כל הפתור משתנה הצבע*/
+}

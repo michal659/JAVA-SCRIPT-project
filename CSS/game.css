@@ -1,0 +1,217 @@
+/*עיצוב התמונה של השעון חול עם הטיימר עצמו*/
+#allTimer {
+    position: fixed; /*נועץ את התמונה בצד המסך גם בגלילה */
+    top: 10px; 
+    left: 10px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* ממרכז את התמונה ואת הטיימר ביחס */
+}
+#allTimer img {/*התמונה*/
+    width: 80px; 
+    height: auto; 
+    margin-bottom: 5px; 
+}
+#timer {
+    font-size: 20px;
+    font-size: 30px; /* גודל כתב גדול יותר */
+font-family: 'Arial', sans-serif; /* גופן ברור */
+    font-weight: bold; /* כתב מודגש */
+color: #0c0c0c; /* צבע כתב כהה */  
+background-color: #fcc592; /* צבע רקע בהיר */
+border: 2px solid #0c0c0c; /* מסגרת כתומה */
+border-radius: 12px; /* פינות מעוגלות */
+padding: 10px 20px; /* ריפוד מסביב לכתוב */
+display: inline-block; /* הצגת האלמנט בצורה inline-block */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה קלה */
+text-align: center; /* יישור מרכזי */
+}
+.image-GameInstruction {/*  התמונה של ההוראות */
+    position: fixed; /* נועץ את התמונה בצד המסך גם בגלילה */
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000; /*שהתמונה תהיה מעל תוכן  */
+}
+.image-GameInstruction img {/*התמונה עצמה*/
+    width: 100px; 
+    height: auto; 
+    border-radius: 8px; /* עיגול פינות  */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הוספת צל לתמונה */
+    transition: transform 0.3s, box-shadow 0.3s; /* הוספת אפקט של מעבר רך  */
+}
+
+.image-GameInstruction img:hover {
+    transform: scale(1.05); /* הגדלת התמונה במעט כשמעבירים מעליה את העכבר */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*  הצל כשמעבירים מעל התמונה את העכבר */
+}
+
+.image-Exit {/*התמונה של היציאה*/
+    position: fixed; /* נועץ את התמונה בצד המסך */
+    top: 125px; 
+    right: 10px;
+    z-index: 1000; /*שהתמונה תהיה מעל תוכן  */
+}
+.image-Exit img {/*התמונה עצמה*/
+    width: 100px;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הוספת צל לתמונה */
+    transition: transform 0.3s, box-shadow 0.3s; /* הוספת אפקט של מעבר רך  */
+}
+.image-Exit img:hover {
+    transform: scale(1.05); /* הגדלת התמונה במעט כשמעבירים מעליה את העכבר */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*  הצל כשמעבירים מעל התמונה את העכבר */
+}
+/* עיצוב לכפתור התחלה */
+#startButton {
+    border: none;
+    background: none; 
+    cursor: pointer; 
+    position: relative; 
+}
+#startButton .image-container {
+    width: 100px;
+    height: 100px; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הוספת צל קטן  */
+    transition: box-shadow 0.3s, transform 0.3s; /* הוספת אפקט של מעבר רך לצל ולמיקום */
+    position: relative; /* יחס עם המיקום והגדלת התמונה*/
+}
+/* עיצוב לתמונה   */
+#startButton .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    transition: transform 0.3s; 
+  
+}
+#startButton .image-container:hover {/*לריחוף */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* הצל יגדל בעת ריחוף על הקונטיינר */
+    transform: scale(1.05); /* הגדלת הקונטיינר יחד עם התמונה */
+}
+.letter {/* עיצוב  האותיות */
+    font-size: 24px; 
+    width: 50px; 
+    height: 50px;
+    margin: 5px; 
+    border-radius: 5px;
+    border: 1px solid #dddddd; 
+    background-color: #f4f4f4; 
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.letter:hover {
+    background-color: #e0e0e0; /* שינוי צבע הרקע בריחוף מעל הכפתור */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הוספת צל בריחוף מעל הכפתור */
+}
+#image {
+    text-align: center; 
+    margin-top: 20px; 
+}
+#hangmanImage {/*תמונות לעץ*/
+    width: 150px; 
+    height: auto; 
+}
+.sp {/*גודל הפסים*/
+    font-size: 48px; 
+}
+.score {/*נקודות*/
+    color: white; 
+    position: relative; 
+    bottom: 51px;/*מיקום הגובה ביחס*/
+}
+.scoreImg {
+    width: 120px; 
+}
+#allScore {
+    position: fixed; /* נועץ את התמונה בצד המסך */
+    left: 121px; 
+    top: 20px;
+}
+#allScoreText {
+    position: absolute; 
+    top: 24px; 
+    right: 16px;
+    color: white;
+}
+/* עיצוב התמונה */
+#gameOveImg {
+    height: auto; 
+    width: 100%;
+}
+/* עיצוב הקונטיינר של ההודעה */
+.message-content {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* תזוזה כדי למרכז את הקונטיינר בדיוק */
+    background-color: white; /* רקע לבן מלא ללא שקיפות */
+    padding: 30px;
+    width: 80%; 
+    height: 80vh;
+    max-width: 600px; 
+    max-height: 500px; 
+    outline: 10px solid rgb(187, 0, 255); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    -webkit-animation-name: animatetop; 
+    -webkit-animation-duration: 0.5s; 
+    animation-name: animatetop;
+    animation-duration: 0.5s; 
+}
+/* אנימציה להנפשת התיבה */
+@-webkit-keyframes animatetop {
+    from { transform: translate(-50%, -60%); opacity: 0 } /* התחלה: התיבה מחוץ למסך למעלה עם שקיפות */
+    to { transform: translate(-50%, -50%); opacity: 1 } /* סיום: התיבה ממוקמת במרכז עם שקיפות מלאה */
+}
+
+@keyframes animatetop {
+    from { transform: translate(-50%, -60%); opacity: 0 } /* התחלה: התיבה מחוץ למסך למעלה עם שקיפות */
+    to { transform: translate(-50%, -50%); opacity: 1 } /* סיום: התיבה ממוקמת במרכז עם שקיפות מלאה */
+}
+/* הגדרת ה-container של הכפתורים */
+.button-container {
+    position: absolute; /* מיקום מוחלט */
+    right: 150px; /* רווח של 150 פיקסלים מהקצה הימני */
+    top: 50%; /* מרכז אנכי לפי המסך */
+    transform: translateY(-50%); /* מתקן את המיקום כדי שהכפתור יהיה בדיוק במרכז האנכי */
+    display: flex; /* שימוש ב-flexbox כדי למקם את הכפתורים אחד מתחת לשני */
+    flex-direction: column; /* ממקם את הכפתורים בעמודה */
+    gap: 10px; /* רווח בין הכפתורים */
+    top: 100px; 
+    right: 120px; 
+}
+/* עיצוב לכפתור שלבים */
+#level2, #level1 {
+    border: none;
+    background: none; 
+    cursor: pointer; 
+    position: relative; 
+}
+
+#level2 .image-level, #level1 .image-level {
+    width: 170px;
+    height: 35px; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* הוספת צל קטן */
+    transition: box-shadow 0.3s, transform 0.3s; /* הוספת אפקט של מעבר רך לצל ולמיקום */
+    position: relative; /* יחס עם המיקום והגדלת התמונה */
+}
+
+/* עיצוב לתמונה */
+#level2 .image-level img, #level1 .image-level img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    transition: transform 0.3s; 
+}
+
+#level2 .image-level:hover, #level1 .image-level:hover { /* לריחוף */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* הצל יגדל בעת ריחוף על הקונטיינר */
+    transform: scale(1.05); /* הגדלת הקונטיינר יחד עם התמונה */
+}
+
+
+
+

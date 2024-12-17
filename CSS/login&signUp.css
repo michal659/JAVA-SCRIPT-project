@@ -1,0 +1,30 @@
+h1 {/*כותרת*/
+    color: #333;
+    margin-top: 30px;
+    font-size: 50px;
+    border: 5px solid #007bff; /* צבע וגובה המסגרת */
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+form {/*מילוי טופס*/
+    display: flex;
+    flex-direction: column;/*עמודה*/
+    align-items: center;/*התיבות יעמדו באמצע*/
+}
+.inputKelt {/*עיצוב התיבות*/
+    width: 300px; 
+    height: 40px; 
+    padding: 10px;
+    border: 2px solid black; 
+    border-radius: 5px; 
+    box-sizing: border-box; /* רוחב תיבת הקלט*/
+    margin-bottom: 10px; /* רווח בין התיבות */
+    background-color: rgba(0, 123, 255, 0.1); /* רקע כחול שקוף */
+}
+.inputKelt::placeholder {
+    color: black; /*placeholder- צבע הטקסט */
+}
